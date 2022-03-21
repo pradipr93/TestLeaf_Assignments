@@ -1,0 +1,34 @@
+package javaLearning.practiceProgram;
+
+import java.util.Arrays;
+
+public class MissingNuumberArray {
+
+	public void findMissingNum(int[] a) {
+
+		Arrays.sort(a);
+		System.out.println(Arrays.toString(a));
+		for (int i = 1; i < a.length; i++) {
+
+			if (i != a[i - 1]) {
+				System.out.println("Missing Number is " +i);
+			}
+
+		}
+	}
+		
+		
+	
+	
+	public static void main(String[] args) {
+		
+		MissingNuumberArray missNumObj = new MissingNuumberArray();
+		int a[] = {1, 2, 6, 9,8,5, 4,3}; 
+		
+		System.out.println(Arrays.toString(a));
+		missNumObj.findMissingNum(a);
+	
+		
+	}
+
+}
